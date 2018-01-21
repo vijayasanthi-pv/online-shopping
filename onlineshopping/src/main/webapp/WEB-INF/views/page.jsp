@@ -26,6 +26,7 @@
   <head>
 
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -34,6 +35,7 @@
 
 	<script type="text/javascript">
 		window.menu = '${title}';
+		window.contextRoot = '${contextRoot}';
 	</script>
 
     <!-- Bootstrap core CSS -->
@@ -42,6 +44,12 @@
     
     <!-- Bootstrap Spacelab theme CSS -->
     <link href="${css}/bootstrap-Spacelab-theme.css" rel="stylesheet">
+    
+    <!-- Bootstrap DataTables -->
+    <link href="${css}/dataTables.bootstrap4.css" rel="stylesheet">
+    
+    <!-- Font Awesome fonts for shopping-cart and eye-open -->
+    <script src="https://use.fontawesome.com/c876ddf92c.js"></script>
 
     <!-- Custom styles for this template -->
     <link href="${css}/myapp.css" rel="stylesheet">
@@ -77,6 +85,11 @@
 	<%@include file="listProducts.jsp" %>
 	</c:if>
 	
+	<!--Loading the singleProduct page -->
+    <c:if test="${userClickShowProduct == true }">
+	<%@include file="singleProduct.jsp" %>
+	</c:if>
+	
 	</div>
 	
     <!-- Footer -->
@@ -85,6 +98,12 @@
     <!-- Bootstrap core JavaScript -->
     <script src="${js}/jquery.min.js"></script>
     <script src="${js}/bootstrap.bundle.min.js"></script>
+    
+     <!-- DataTable Plugin -->
+     <script src="${js}/jquery.dataTables.js"></script>
+     
+     <!-- DataTable Bootstrap Sript -->
+     <script src="${js}/dataTables.bootstrap4.js"></script>
     
     <!-- Self coded JavaScript -->
     <script src="${js}/myapp.js"></script>
