@@ -63,7 +63,7 @@
     
     <!-- Page Content -->
     
-    <div class="content">
+    <div class="content mt-2">
     
     <!--Loading the home content -->
     <c:if test="${userClickHome == true }">
@@ -88,6 +88,11 @@
 	<!--Loading the singleProduct page -->
     <c:if test="${userClickShowProduct == true }">
 	<%@include file="singleProduct.jsp" %>
+	</c:if>
+	
+	<!--Load this page when user clicks manage products-->
+    <c:if test="${userClickManageProducts == true }">
+	<%@include file="manageProducts.jsp" %>
 	</c:if>
 	
 	</div>
